@@ -20,6 +20,6 @@
     "**/*.ts",
     "**/*.tsx",
     "components/layout-components/MainAppLayout.jsx"
-  ],
+, "pages/_document.jsx"  ],
   "exclude": ["node_modules"]
 }

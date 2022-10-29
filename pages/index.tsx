@@ -35,12 +35,15 @@ function Home() {
             {listings?.map((each) => {
               return (
                 <div
-                  className='flex flex-col card hover:scale-105 transition-all duration-150 ease-out'
+                  className='flex flex-col card hover:scale-105 transition-all duration-200 ease-out'
                   key={each.id}
                 >
                   <div className='bg--secondary px-3 py-8 border rounded-md sm:min-h-[350px]'>
                     <div className='flex-1 flex flex-col pb-3 items-center'>
-                      <MediaRenderer className='w-48' src={each.asset.image} />
+                      <MediaRenderer
+                        className='w-full rounded-lg'
+                        src={each.asset.image}
+                      />
                     </div>
                     <div className='mt-3'>
                       <h2 className='text-lg truncate font-bold py-1'>
