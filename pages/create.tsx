@@ -137,32 +137,30 @@ function Create({}: Props) {
         <section className='flex overflow-x-scroll space-x-4 py-4 w-full px-3'>
           {ownedNfts?.data?.map((each) => {
             return (
-              <>
-                <div
-                  className={`card bg--secondary px-3 py-8 border rounded-md sm:min-h-[300px] w-[250px] ${
-                    each.metadata.id === selectedNft?.metadata.id
-                      ? 'border-blue-500 scale-105 transition-all duration-300 ease-out'
-                      : 'border-transparent'
-                  }`}
-                  key={each.metadata.id}
-                  onClick={() => setSelectedNft(each)}
-                >
-                  <div className='flex-1 flex flex-col pb-3 items-center w-full'>
-                    <MediaRenderer
-                      className='w-full rounded-lg'
-                      src={each.metadata.image}
-                    />
-                  </div>
-                  <div className='mt-3'>
-                    <h2 className='text-lg truncate font-bold py-1'>
-                      {each.metadata.name}
-                    </h2>
-                    <p className='truncate text-sm'>
-                      {each.metadata.description}
-                    </p>
-                  </div>
+              <div
+                className={`card bg--secondary px-3 py-8 border rounded-md sm:min-h-[300px] w-[250px] ${
+                  each.metadata.id === selectedNft?.metadata.id
+                    ? 'border-blue-500 scale-105 transition-all duration-300 ease-out'
+                    : 'border-transparent'
+                }`}
+                key={each.metadata.id}
+                onClick={() => setSelectedNft(each)}
+              >
+                <div className='flex-1 flex flex-col pb-3 items-center w-full'>
+                  <MediaRenderer
+                    className='w-full rounded-lg'
+                    src={each.metadata.image}
+                  />
                 </div>
-              </>
+                <div className='mt-3'>
+                  <h2 className='text-lg truncate font-bold py-1'>
+                    {each.metadata.name}
+                  </h2>
+                  <p className='truncate text-sm'>
+                    {each.metadata.description}
+                  </p>
+                </div>
+              </div>
             );
           })}
         </section>

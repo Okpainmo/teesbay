@@ -55,7 +55,7 @@ function AddItem({}: Props) {
 
   console.log(contract);
   return (
-    <>
+    <main className="pb-10">
       <Header />
       <section className='max-w-6xl mx-auto px-6 md:px-10 py-10 border'>
         <section className='mb-6'>
@@ -129,7 +129,7 @@ function AddItem({}: Props) {
           </form>
         </section>
       </section>
-    </>
+    </main>
   );
 }
 

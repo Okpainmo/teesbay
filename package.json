@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "node api.js && next dev",
+    "build": "node api.js && next build",
+    "start": "node api.js && next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.12",
@@ -12,6 +12,7 @@
     "ethers": "^5.7.2",
     "next": "latest",
     "react": "18.2.0",
+    "react-countdown": "^2.3.3",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
